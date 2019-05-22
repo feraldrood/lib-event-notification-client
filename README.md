@@ -11,8 +11,8 @@ This library provides `ClientFactory` class, which you should use to get the API
 ```php
 use Paysera\Client\EventNotificationClient\ClientFactory;
 
-$clientFactory = new ClientFactory([
-    'base_url' => '/', // optional, in case you need a custom one.
+$clientFactory = ClientFactory::create([
+    'base_url' => 'https://checkout-eu-a.paysera.com/notification/rest/v1/', // optional, in case you need a custom one.
     'basic' => [                                        // use this, it API requires Basic authentication.
         'username' => 'username',
         'password' => 'password',
